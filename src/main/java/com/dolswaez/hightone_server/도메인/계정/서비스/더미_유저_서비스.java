@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.Locale;
 import java.util.Random;
 
-@Service
+//@Service
 public class 더미_유저_서비스 implements 유저_서비스 {
     @Override
     public void 인증메일_보내기(String 이메일) {
@@ -16,7 +16,7 @@ public class 더미_유저_서비스 implements 유저_서비스 {
     }
 
     @Override
-    public String 인증코드_확인(String 코드) {
+    public String 인증코드_확인하기(String 코드) {
         String 문자열 = "인증코드 " +
                 코드 + "는 이메일 test@high.tone 의 인증코드입니다!\n" +
                 "이메일 test@high.tone 의 인증이 완료되었습니다!\n" +

@@ -21,7 +21,7 @@ public class 이메일_인증_컨트롤러 {
 
     @GetMapping("/{코드}")
     public ResponseEntity<이메일_인증_응답> 이메일_인증(@PathVariable String 코드) {
-        String 이메일_토큰 = 유저_서비스.인증코드_확인(코드);
+        String 이메일_토큰 = 유저_서비스.인증코드_확인하기(코드);
         이메일_인증_응답 응답 = new 이메일_인증_응답(이메일_토큰);
         return ResponseEntity.ok(응답);
     }
