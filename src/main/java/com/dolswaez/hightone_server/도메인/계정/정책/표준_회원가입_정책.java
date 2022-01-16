@@ -5,7 +5,7 @@ import com.dolswaez.hightone_server.도메인.계정.예외.이메일_정책을_
 import com.dolswaez.hightone_server.도메인.계정.예외.이미_아이디가_존재할_때_발생하는_예외;
 import com.dolswaez.hightone_server.도메인.계정.예외.이미_이메일이_존재할_때_발생하는_예외;
 import com.dolswaez.hightone_server.도메인.계정.유틸.이메일_토큰_유틸;
-import com.dolswaez.hightone_server.도메인.계정.정보.데이터_전달_객체.회원가입_정보;
+import com.dolswaez.hightone_server.도메인.계정.정보.정보_전달_객체.회원가입_정보;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

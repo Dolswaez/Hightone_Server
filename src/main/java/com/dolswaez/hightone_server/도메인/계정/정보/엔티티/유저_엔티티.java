@@ -25,6 +25,8 @@ public class 유저_엔티티 {
     private String 암호화된_비밀번호;
     @Column(name = "email") @Length(max = 50)
     private String 이메일;
+    @Column(name = "school_name") @Length(max = 20)
+    private String 학교이름;
     @Enumerated(value = EnumType.ORDINAL)
     @Column(name = "school_type")
     private 학교종류 학교;

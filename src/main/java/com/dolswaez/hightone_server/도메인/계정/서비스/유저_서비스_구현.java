@@ -1,13 +1,13 @@
 package com.dolswaez.hightone_server.도메인.계정.서비스;
 
 import com.dolswaez.hightone_server.도메인.계정.레포지토리.유저_레포지토리;
-import com.dolswaez.hightone_server.도메인.계정.예외.비밀번호를_찾을_수_없을_경우;
+import com.dolswaez.hightone_server.도메인.계정.예외.비밀번호를_찾을_수_없을_떄_발생하는_예외;
 import com.dolswaez.hightone_server.도메인.계정.유틸.로그인_토큰_유틸;
 import com.dolswaez.hightone_server.도메인.계정.유틸.이메일_토큰_유틸;
 import com.dolswaez.hightone_server.도메인.계정.유틸.재발급_토큰_유틸;
-import com.dolswaez.hightone_server.도메인.계정.정보.데이터_전달_객체.로그인_정보;
-import com.dolswaez.hightone_server.도메인.계정.정보.데이터_전달_객체.로그인_토큰;
-import com.dolswaez.hightone_server.도메인.계정.정보.데이터_전달_객체.회원가입_정보;
+import com.dolswaez.hightone_server.도메인.계정.정보.정보_전달_객체.로그인_정보;
+import com.dolswaez.hightone_server.도메인.계정.정보.정보_전달_객체.로그인_토큰;
+import com.dolswaez.hightone_server.도메인.계정.정보.정보_전달_객체.회원가입_정보;
 import com.dolswaez.hightone_server.도메인.계정.정보.엔티티.유저_엔티티;
 import com.dolswaez.hightone_server.도메인.계정.정책.로그인_정책;
 import com.dolswaez.hightone_server.도메인.계정.정책.회원가입_정책;
@@ -63,7 +63,7 @@ public class 유저_서비스_구현 implements 유저_서비스{
         유저_엔티티 엔티티 = new 유저_엔티티(
                 0L, 정보.이름(),
                 정보.아이디(), 정보.암호화된_비밀번호(), 이메일,
-                정보.학교(), 정보.학년(), 정보.반(), 정보.번호()
+                정보.학교이름(), 정보.학교(), 정보.학년(), 정보.반(), 정보.번호()
         );
         return 유저_레포지토리.save(엔티티).get인덱스();
     }
@@ -78,7 +78,7 @@ public class 유저_서비스_구현 implements 유저_서비스{
         로그인_정책.정책확인(정보);
         유저_엔티티 엔티티 = 유저_레포지토리.getBy아이디(정보.아이디());
         if(!비밀번호_인코더.matches(정보.비밀번호(), 엔티티.get암호화된_비밀번호()))
-            throw new 비밀번호를_찾을_수_없을_경우(정보.비밀번호());
+            throw new 비밀번호를_찾을_수_없을_떄_발생하는_예외(정보.비밀번호());
         return 엔티티로_로그인_토큰_생성하기(엔티티);
     }
 

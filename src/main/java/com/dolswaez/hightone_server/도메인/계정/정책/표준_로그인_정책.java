@@ -2,7 +2,7 @@ package com.dolswaez.hightone_server.도메인.계정.정책;
 
 import com.dolswaez.hightone_server.도메인.계정.레포지토리.유저_레포지토리;
 import com.dolswaez.hightone_server.도메인.계정.예외.아이디를_찾을_수_없을_경우_발생하는_예외;
-import com.dolswaez.hightone_server.도메인.계정.정보.데이터_전달_객체.로그인_정보;
+import com.dolswaez.hightone_server.도메인.계정.정보.정보_전달_객체.로그인_정보;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

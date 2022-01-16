@@ -1,8 +1,8 @@
 package com.dolswaez.hightone_server.도메인.계정.컨트롤러;
 
 import com.dolswaez.hightone_server.도메인.계정.서비스.유저_서비스;
-import com.dolswaez.hightone_server.도메인.계정.정보.데이터_전달_객체.로그인_정보;
-import com.dolswaez.hightone_server.도메인.계정.정보.데이터_전달_객체.로그인_토큰;
+import com.dolswaez.hightone_server.도메인.계정.정보.정보_전달_객체.로그인_정보;
+import com.dolswaez.hightone_server.도메인.계정.정보.정보_전달_객체.로그인_토큰;
 import com.dolswaez.hightone_server.도메인.계정.정보.요청.로그인_요청;
 import com.dolswaez.hightone_server.도메인.계정.정보.응답.로그인_응답;
 import lombok.RequiredArgsConstructor;
