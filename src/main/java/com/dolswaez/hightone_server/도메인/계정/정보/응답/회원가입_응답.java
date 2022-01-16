@@ -9,6 +9,7 @@ public record 회원가입_응답(
         @JsonProperty("id") String 아이디,
         @JsonProperty("encryptedPassword") String 암호화된_비밀번호,
         @JsonProperty("email") String 이메일,
+        @JsonProperty("schoolName") String 학교이름,
         @JsonProperty("schoolType") 학교종류 학교,
         @JsonProperty("grade") Integer 학년,
         @JsonProperty("class") Integer 반,
